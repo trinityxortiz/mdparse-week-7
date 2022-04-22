@@ -22,17 +22,21 @@ public class MarkdownParse {
                 break;
             }
             int closeParen = markdown.indexOf(")", openParen);
+            // if (markdown.indexOf("!", currentIndex) ==  (openBracket - 1)) {
+                
+            // }
             if (closeBracket == openParen - 1) {
                 toReturn.add(markdown.substring(openParen + 1, closeParen));
-            }
-            currentIndex = closeParen + 1;
-
-            
+                currentIndex = closeParen + 1;
+            } else {
+                currentIndex = closeBracket + 1;
+            }            
         }
 
         return toReturn;
     }
 
+// javac MarkdownParse.java && java MarkdownParse test-file3.md
 
     public static void main(String[] args) throws IOException {
         Path fileName = Path.of(args[0]);
