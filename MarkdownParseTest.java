@@ -24,11 +24,55 @@ public class MarkdownParseTest {
     @Test
     public void testFiletest() {
         try {
-            assertEquals(MarkdownParse.getLinks(readString("test-file.md")), 
-            List.of("https://something.com", "some-thing.html"));
+            assertEquals(List.of("https://something.com", "some-thing.html"), 
+            MarkdownParse.getLinks(readString("test-file.md")));
         } catch (IOException e) {
             fail();
         }
         
     }
+
+    @Test
+    public void testFile2test() {
+        try {
+            assertEquals(List.of("https://github.com/dmontefalcon/markdown-parser", 
+            "https://youtube.com"), MarkdownParse.getLinks(readString("test-file2.md")));
+        } catch (IOException e) {
+            fail();
+        }
+        
+    }
+
+    @Test
+    public void testFile3test() {
+        try {
+            assertEquals(List.of("https://youtube.com"), 
+            MarkdownParse.getLinks(readString("test-file3.md")));
+        } catch (IOException e) {
+            fail();
+        }
+        
+    }
+
+    @Test
+    public void testFile4test() {
+        try {
+            assertEquals(List.of("https://gmail.com"), 
+            MarkdownParse.getLinks(readString("test-file4.md")));
+        } catch (IOException e) {
+            fail();
+        }
+        
+    }
+
+    // @Test
+    // public void testFile5test() {
+    //     try {
+    //         assertEquals(MarkdownParse.getLinks(readString("test-file5.md")), 
+    //         List.of(""));
+    //     } catch (IOException e) {
+    //         fail();
+    //     }
+        
+    // }
 }
