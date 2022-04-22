@@ -32,7 +32,8 @@ public class MarkdownParse {
                 
             // }
             if (closeBracket == openParen - 1 && closeBracket > openBracket &&
-            closeBracket > openBracket + 1) {
+            closeBracket > openBracket + 1 && (openBracket == 0 ||
+            markdown.charAt(openBracket - 1) != '!')) {
                 toReturn.add(markdown.substring(openParen + 1, closeParen));
                 currentIndex = closeParen + 1;
             } else {
