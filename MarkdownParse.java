@@ -40,6 +40,7 @@ public class MarkdownParse {
 
     public static void main(String[] args) throws IOException {
         Path fileName = Path.of(args[0]);
+        System.out.println("HELLO REMEMBER TO REMOVE ME!");
         String content = Files.readString(fileName);
         ArrayList<String> links = getLinks(content);
 	    System.out.println(links);
