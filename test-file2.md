@@ -1,4 +1,6 @@
-# Title 2
+# Title
 
-[link1](https://github.com/dmontefalcon/markdown-parser)
-[link2](https://youtube.com)
+[a link!](https://something.com)
+[another link!](some-page.html)
+
+some paragraph text after the links
