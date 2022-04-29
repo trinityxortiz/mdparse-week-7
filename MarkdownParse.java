@@ -28,7 +28,6 @@ public class MarkdownParse {
             if (closeParen == -1) {
                 break;
             }
-
             // if(openParen + 1 == markdown.charAt('(')){
             //     break;
             // }
@@ -44,7 +43,6 @@ public class MarkdownParse {
                 currentIndex = closeBracket + 1;
             }            
         }
-
         return toReturn;
     }
 
