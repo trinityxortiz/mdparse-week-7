@@ -160,6 +160,15 @@ public class MarkdownParseTest {
        }
     }
     
+    @Test
+    public void failingTest(){
+        try {
+            assertEquals(List.of("google.com"),
+                    MarkdownParse.getLinks(readString("test-file8.md")));
+        } catch (IOException e) {
+            fail();
+        }
+    }
 }
 
 
