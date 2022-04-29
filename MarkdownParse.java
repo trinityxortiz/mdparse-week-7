@@ -28,6 +28,7 @@ public class MarkdownParse {
             if (closeParen == -1) {
                 break;
             }
+            
             // if(openParen + 1 == markdown.charAt('(')){
             //     break;
             // }
