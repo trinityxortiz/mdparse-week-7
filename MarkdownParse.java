@@ -35,7 +35,6 @@ public class MarkdownParse {
             // if (markdown.indexOf("!", currentIndex) ==  (openBracket - 1)) {
                 
             // }
-            
             if (closeBracket == openParen - 1 && closeBracket > openBracket &&
             closeBracket > openBracket + 1 && (openBracket == 0 ||
             markdown.charAt(openBracket - 1) != '!') && (markdown.charAt(openParen+1) != '(')) {
