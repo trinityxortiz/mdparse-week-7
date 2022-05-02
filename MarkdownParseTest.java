@@ -25,7 +25,7 @@ public class MarkdownParseTest {
     public void testFile1atest() {
         try {
             assertEquals(List.of("https://something.com", "some-thing.html"), 
-            MarkdownParse.getLinks(readString("test-file1a.md")));
+            MarkdownParse.getLinks(readString("C:\\Users\\calis\\OneDrive\\Documents\\GitHub\\group-clone-markdown-parser\\test-file1a.md")));
         } catch (IOException e) {
             fail();
         }
@@ -36,7 +36,7 @@ public class MarkdownParseTest {
     public void testFile2atest() {
         try {
             assertEquals(List.of("https://github.com/dmontefalcon/markdown-parser", 
-            "https://youtube.com"), MarkdownParse.getLinks(readString("test-file2a.md")));
+            "https://youtube.com"), MarkdownParse.getLinks(readString("C:\\Users\\calis\\OneDrive\\Documents\\GitHub\\group-clone-markdown-parser\\test-file2a.md")));
         } catch (IOException e) {
             fail();
         }
@@ -47,7 +47,7 @@ public class MarkdownParseTest {
     public void testFile3atest() {
         try {
             assertEquals(List.of("https://youtube.com"), 
-            MarkdownParse.getLinks(readString("test-file3a.md")));
+            MarkdownParse.getLinks(readString("C:\\Users\\calis\\OneDrive\\Documents\\GitHub\\group-clone-markdown-parser\\test-file3a.md")));
         } catch (IOException e) {
             fail();
         }
@@ -58,7 +58,7 @@ public class MarkdownParseTest {
     public void testFile4atest() {
         try {
             assertEquals(List.of("https://gmail.com"), 
-            MarkdownParse.getLinks(readString("test-file4a.md")));
+            MarkdownParse.getLinks(readString("C:\\Users\\calis\\OneDrive\\Documents\\GitHub\\group-clone-markdown-parser\\test-file4a.md")));
         } catch (IOException e) {
             fail();
         }
@@ -82,7 +82,7 @@ public class MarkdownParseTest {
         try {
             assertEquals(List.of("https://something.com" ,
             "some-thing.html"), 
-            MarkdownParse.getLinks(readString("test-file.md")));
+            MarkdownParse.getLinks(readString("C:\\Users\\calis\\OneDrive\\Documents\\GitHub\\group-clone-markdown-parser\\test-file.md")));
         } catch (IOException e) {
             fail();
         }
@@ -94,7 +94,7 @@ public class MarkdownParseTest {
         try {
             assertEquals(List.of("https://something.com" ,
             "some-page.html"), 
-            MarkdownParse.getLinks(readString("test-file2.md")));
+            MarkdownParse.getLinks(readString("C:\\Users\\calis\\OneDrive\\Documents\\GitHub\\group-clone-markdown-parser\\test-file2.md")));
         } catch (IOException e) {
             fail();
         }
@@ -104,7 +104,7 @@ public class MarkdownParseTest {
     public void testFile3test() {
         try {
             assertEquals(List.of(),
-            MarkdownParse.getLinks(readString("test-file3.md")));
+            MarkdownParse.getLinks(readString("C:\\Users\\calis\\OneDrive\\Documents\\GitHub\\group-clone-markdown-parser\\test-file3.md")));
         } catch (IOException e) {
             fail();
         }
@@ -114,7 +114,7 @@ public class MarkdownParseTest {
     public void testFile4test() {
         try {
             assertEquals(List.of(),
-            MarkdownParse.getLinks(readString("test-file4.md")));
+            MarkdownParse.getLinks(readString("C:\\Users\\calis\\OneDrive\\Documents\\GitHub\\group-clone-markdown-parser\\test-file4.md")));
         } catch (IOException e) {
             fail();
         }
@@ -124,7 +124,7 @@ public class MarkdownParseTest {
     public void testFile5test() {
         try {
             assertEquals(List.of(),
-            MarkdownParse.getLinks(readString("test-file5.md")));
+            MarkdownParse.getLinks(readString("C:\\Users\\calis\\OneDrive\\Documents\\GitHub\\group-clone-markdown-parser\\test-file5.md")));
         } catch (IOException e) {
             fail();
         }
@@ -134,7 +134,7 @@ public class MarkdownParseTest {
     public void testFile6test() {
         try {
             assertEquals(List.of(),
-            MarkdownParse.getLinks(readString("test-file6.md")));
+            MarkdownParse.getLinks(readString("C:\\Users\\calis\\OneDrive\\Documents\\GitHub\\group-clone-markdown-parser\\test-file6.md")));
         } catch (IOException e) {
             fail();
         }
@@ -144,7 +144,7 @@ public class MarkdownParseTest {
     public void testFile7test() {
        try {
            assertEquals(List.of(),
-                   MarkdownParse.getLinks(readString("test-file7.md")));
+                   MarkdownParse.getLinks(readString("C:\\Users\\calis\\OneDrive\\Documents\\GitHub\\group-clone-markdown-parser\\test-file7.md")));
        } catch (IOException e) {
            fail();
        }
@@ -154,7 +154,7 @@ public class MarkdownParseTest {
     public void testFile8test() {
        try {
            assertEquals(List.of(),
-                   MarkdownParse.getLinks(readString("test-file8.md")));
+                   MarkdownParse.getLinks(readString("C:\\Users\\calis\\OneDrive\\Documents\\GitHub\\group-clone-markdown-parser\\test-file8.md")));
        } catch (IOException e) {
            fail();
        }
@@ -164,7 +164,7 @@ public class MarkdownParseTest {
     public void failingTest(){
         try {
             assertEquals(List.of(),
-                    MarkdownParse.getLinks(readString("test-file8.md")));
+                    MarkdownParse.getLinks(readString("C:\\Users\\calis\\OneDrive\\Documents\\GitHub\\group-clone-markdown-parser\\test-file8.md")));
         } catch (IOException e) {
             fail();
         }
@@ -173,7 +173,7 @@ public class MarkdownParseTest {
     @Test
     public void testfile1md(){
         try{
-        assertEquals(List.of(),MarkdownParse.getLinks(readString("testfile1.md")));
+        assertEquals(List.of(),MarkdownParse.getLinks(readString("C:\\Users\\calis\\OneDrive\\Documents\\GitHub\\group-clone-markdown-parser\\testfile1.md")));
         } catch (IOException e){
             fail();
         }
