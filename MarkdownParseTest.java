@@ -112,7 +112,7 @@ public class MarkdownParseTest {
     @Test
     public void testFile2testFail() {
         try {
-            assertEquals(List.of("http://something.com" ,
+            assertEquals(List.of("https://something.com" ,
             "some-page.html"), 
             MarkdownParse.getLinks(readString("test-file2.md")));
         } catch (IOException e) {
