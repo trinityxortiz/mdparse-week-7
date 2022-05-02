@@ -34,7 +34,7 @@ public class MarkdownParseTest {
     public void testFile1atest() {
         try {
             assertEquals(List.of("https://something.com", "some-thing.html"), 
-            MarkdownParse.getLinks(readString("C:\\Users\\calis\\OneDrive\\Documents\\GitHub\\group-clone-markdown-parser\\test-file1a.md")));
+            MarkdownParse.getLinks(readString("test-file1a.md")));
         } catch (IOException e) {
             fail();
         }
@@ -45,7 +45,7 @@ public class MarkdownParseTest {
     public void testFile2atest() {
         try {
             assertEquals(List.of("https://github.com/dmontefalcon/markdown-parser", 
-            "https://youtube.com"), MarkdownParse.getLinks(readString("C:\\Users\\calis\\OneDrive\\Documents\\GitHub\\group-clone-markdown-parser\\test-file2a.md")));
+            "https://youtube.com"), MarkdownParse.getLinks(readString("test-file2a.md")));
         } catch (IOException e) {
             fail();
         }
