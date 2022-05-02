@@ -110,6 +110,17 @@ public class MarkdownParseTest {
     }
 
     @Test
+    public void testFile2testFail() {
+        try {
+            assertEquals(List.of("http://something.com" ,
+            "some-page.html"), 
+            MarkdownParse.getLinks(readString("C:\\Users\\calis\\OneDrive\\Documents\\GitHub\\group-clone-markdown-parser\\test-file2.md")));
+        } catch (IOException e) {
+            fail();
+        }
+    }
+
+    @Test
     public void testFile3test() {
         try {
             assertEquals(List.of(),
