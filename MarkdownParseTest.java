@@ -1,5 +1,14 @@
-import static org.junit.Assert.*;
+/*
+Windows: 
+javac -cp ".;lib\junit-4.13.2.jar;lib\hamcrest-core-1.3.jar" MarkdownParseTest.java
+java -cp ".;lib/junit-4.13.2.jar;lib/hamcrest-core-1.3.jar" org.junit.runner.JUnitCore MarkdownParseTest
 
+Linux:
+javac -cp .:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar MarkdownParseTest.java
+java -cp .:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar org.junit.runner.JUnitCore MarkdownParseTest
+*/
+
+import static org.junit.Assert.*;
 import java.io.IOException;
 import java.util.List;
 import java.io.IOException;
