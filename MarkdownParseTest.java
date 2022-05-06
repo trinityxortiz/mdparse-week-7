@@ -3,6 +3,8 @@ Windows:
 javac -cp ".;lib\junit-4.13.2.jar;lib\hamcrest-core-1.3.jar" MarkdownParseTest.java
 java -cp ".;lib/junit-4.13.2.jar;lib/hamcrest-core-1.3.jar" org.junit.runner.JUnitCore MarkdownParseTest
 
+*change
+
 Linux:
 javac -cp .:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar MarkdownParseTest.java
 java -cp .:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar org.junit.runner.JUnitCore MarkdownParseTest
@@ -14,8 +16,6 @@ scp -r <source.java> <ieng6:destination>; ssh ieng6 "cd destination; javac sourc
 scp -r . ieng6calista:~/group-clone-markdown-parser; ssh ieng6calista "cd group-clone-markdown-parser; javac -cp .:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar MarkdownParseTest.java; java -cp .:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar org.junit.runner.JUnitCore MarkdownParseTest"
 
 scp -r *.java *.md lib/ ieng6:group-clone-markdown-parser; ssh ieng6calista "cd group-clone-markdown-parser; /software/CSE/oracle-java-17/jdk-17.0.1/bin/javac -cp .:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar MarkdownParseTest.java; /software/CSE/oracle-java-17/jdk-17.0.1/bin/java -cp .:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar org.junit.runner.JUnitCore MarkdownParseTest"
-
-
  */
 
 import static org.junit.Assert.*;
@@ -32,7 +32,7 @@ public class MarkdownParseTest {
     
     @Test
     public void addition() {
-        assertEquals(2, 1 + 1);
+        assertEquals(3, 1 + 1);
     }
 
 
