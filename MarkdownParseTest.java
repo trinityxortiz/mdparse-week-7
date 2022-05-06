@@ -6,7 +6,15 @@ java -cp ".;lib/junit-4.13.2.jar;lib/hamcrest-core-1.3.jar" org.junit.runner.JUn
 Linux:
 javac -cp .:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar MarkdownParseTest.java
 java -cp .:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar org.junit.runner.JUnitCore MarkdownParseTest
-*/
+
+ ssh ieng6calista; cd group-clone-markdown-parser; javac -cp .:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar MarkdownParseTest.java; java -cp .:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar org.junit.runner.JUnitCore MarkdownParseTest
+
+
+scp -r <source.java> <ieng6:destination>; ssh ieng6 "cd destination; javac source.java; java source"
+scp -r . ieng6calista:~/group-clone-markdown-parser; ssh ieng6calista "cd group-clone-markdown-parser"
+
+
+ */
 
 import static org.junit.Assert.*;
 import java.io.IOException;
