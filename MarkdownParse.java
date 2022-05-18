@@ -46,7 +46,6 @@ public class MarkdownParse {
         return toReturn;
     }
 
-// javac MarkdownParse.java && java MarkdownParse test-file3.md
 
     public static void main(String[] args) throws IOException {
         Path fileName = Path.of(args[0]);

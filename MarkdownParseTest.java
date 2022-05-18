@@ -3,8 +3,6 @@ Windows:
 javac -cp ".;lib\junit-4.13.2.jar;lib\hamcrest-core-1.3.jar" MarkdownParseTest.java
 java -cp ".;lib/junit-4.13.2.jar;lib/hamcrest-core-1.3.jar" org.junit.runner.JUnitCore MarkdownParseTest
 
-*change
-
 Linux:
 javac -cp .:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar MarkdownParseTest.java
 java -cp .:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar org.junit.runner.JUnitCore MarkdownParseTest
@@ -85,17 +83,6 @@ public class MarkdownParseTest {
         
     }
 
-    // @Test
-    // public void testFile5test() {
-    //     try {
-    //         assertEquals(MarkdownParse.getLinks(readString("test-file5.md")), 
-    //         List.of(""));
-    //     } catch (IOException e) {
-    //         fail();
-    //     }
-        
-    // }
-
     
     @Test
     public void testFiletest() {
@@ -131,15 +118,15 @@ public class MarkdownParseTest {
         }
     }
 
-    @Test
-    public void testFile12() {
-        try {
-            assertEquals(List.of("www.google.com"), 
-            MarkdownParse.getLinks(readString("test-file12.md")));
-        } catch (IOException e) {
-            fail();
-        }
-    }
+    // @Test
+    // public void testFile12() {
+    //     try {
+    //         assertEquals(List.of("www.google.com"), 
+    //         MarkdownParse.getLinks(readString("test-file12.md")));
+    //     } catch (IOException e) {
+    //         fail();
+    //     }
+    // }
 
     @Test
     public void testFile3test() {
@@ -222,6 +209,38 @@ public class MarkdownParseTest {
         }
     }
 
+    // lab report 4 tests
+    @Test
+    public void testsnippet1() {
+        try {
+            assertEquals(List.of("`google.com", "google.com"), 
+            MarkdownParse.getLinks(readString("test-file1a.md")));
+        } catch (IOException e) {
+            fail();
+        }
+        
+    }
+
+    @Test
+    public void testsnippet2(){
+        try {
+            assertEquals(List.of("https://something.com", "some-thing.html"), 
+            MarkdownParse.getLinks(readString("test-file1a.md")));
+        } catch (IOException e) {
+            fail();
+        }
+    }
+
+
+    @Test
+    public void testsnippet3(){
+        try {
+            assertEquals(List.of("https://something.com", "some-thing.html"), 
+            MarkdownParse.getLinks(readString("test-file1a.md")));
+        } catch (IOException e) {
+            fail();
+        }
+    }
     
 }
 
