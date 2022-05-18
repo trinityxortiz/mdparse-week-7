@@ -7,19 +7,11 @@ Linux:
 javac -cp .:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar MarkdownParseTest.java
 java -cp .:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar org.junit.runner.JUnitCore MarkdownParseTest
 
-ssh ieng6calista; cd group-clone-markdown-parser; javac -cp .:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar MarkdownParseTest.java; java -cp .:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar org.junit.runner.JUnitCore MarkdownParseTest
-
-
-scp -r <source.java> <ieng6:destination>; ssh ieng6 "cd destination; javac source.java; java source"
-scp -r . ieng6calista:~/group-clone-markdown-parser; ssh ieng6calista "cd group-clone-markdown-parser; javac -cp .:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar MarkdownParseTest.java; java -cp .:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar org.junit.runner.JUnitCore MarkdownParseTest"
-
-scp -r *.java *.md lib/ ieng6:group-clone-markdown-parser; ssh ieng6calista "cd group-clone-markdown-parser; /software/CSE/oracle-java-17/jdk-17.0.1/bin/javac -cp .:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar MarkdownParseTest.java; /software/CSE/oracle-java-17/jdk-17.0.1/bin/java -cp .:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar org.junit.runner.JUnitCore MarkdownParseTest"
  */
 
 import static org.junit.Assert.*;
 import java.io.IOException;
 import java.util.List;
-import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
@@ -118,16 +110,6 @@ public class MarkdownParseTest {
         }
     }
 
-    // @Test
-    // public void testFile12() {
-    //     try {
-    //         assertEquals(List.of("www.google.com"), 
-    //         MarkdownParse.getLinks(readString("test-file12.md")));
-    //     } catch (IOException e) {
-    //         fail();
-    //     }
-    // }
-
     @Test
     public void testFile3test() {
         try {
@@ -209,12 +191,22 @@ public class MarkdownParseTest {
         }
     }
 
+    // @Test
+    // public void testFile12() {
+    //     try {
+    //         assertEquals(List.of("www.google.com"), 
+    //         MarkdownParse.getLinks(readString("test-file12.md")));
+    //     } catch (IOException e) {
+    //         fail();
+    //     }
+    // }
+
     // lab report 4 tests
     @Test
     public void testsnippet1() {
         try {
-            assertEquals(List.of("`google.com", "google.com"), 
-            MarkdownParse.getLinks(readString("test-file1a.md")));
+            assertEquals(List.of("`google.com", "google.com", "ucsd.edu"), 
+            MarkdownParse.getLinks(readString("snippet1.md")));
         } catch (IOException e) {
             fail();
         }
@@ -224,8 +216,8 @@ public class MarkdownParseTest {
     @Test
     public void testsnippet2(){
         try {
-            assertEquals(List.of("https://something.com", "some-thing.html"), 
-            MarkdownParse.getLinks(readString("test-file1a.md")));
+            assertEquals(List.of("a.com", "a.com(())", "example.com"), 
+            MarkdownParse.getLinks(readString("snippet2.md")));
         } catch (IOException e) {
             fail();
         }
@@ -235,8 +227,9 @@ public class MarkdownParseTest {
     @Test
     public void testsnippet3(){
         try {
-            assertEquals(List.of("https://something.com", "some-thing.html"), 
-            MarkdownParse.getLinks(readString("test-file1a.md")));
+            assertEquals(List.of("https://www.twitter.com", "https://sites.google.com/eng.ucsd.edu/cse-15l-spring-2022/schedule", 
+                "https://cse.ucsd.edu/"), 
+            MarkdownParse.getLinks(readString("snippet3.md")));
         } catch (IOException e) {
             fail();
         }

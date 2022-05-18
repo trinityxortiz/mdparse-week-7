@@ -28,12 +28,6 @@ public class MarkdownParse {
             if (closeParen == -1) {
                 break;
             }
-            // if(openParen + 1 == markdown.charAt('(')){
-            //     break;
-            // }
-            // if (markdown.indexOf("!", currentIndex) ==  (openBracket - 1)) {
-                
-            // }
             if (closeBracket == openParen - 1 && closeBracket > openBracket &&
             closeBracket > openBracket + 1 && (openBracket == 0 ||
             markdown.charAt(openBracket - 1) != '!') && (markdown.charAt(openParen+1) != '(')) {
@@ -54,5 +48,4 @@ public class MarkdownParse {
 	    System.out.println(links);
     }
 }
-        // System.out.println("HELLO REMEMBER TO REMOVE ME!");
 
