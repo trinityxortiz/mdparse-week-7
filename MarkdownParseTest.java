@@ -14,7 +14,6 @@ import java.io.IOException;
 import java.util.List;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.util.ArrayList;
 import org.junit.*;
 
 
@@ -191,14 +190,13 @@ public class MarkdownParseTest {
         }
     }
 
-    // lab report 4 tests
+    //TESTS FOR LAB REPORT 4
     @Test
     public void testsnippet1() {
         try {
             assertEquals(List.of("`google.com", "google.com", "ucsd.edu"), 
             MarkdownParse.getLinks(readString("snippet1.md")));
         } catch (IOException e) {
-            fail();
         }
         
     }
@@ -209,10 +207,8 @@ public class MarkdownParseTest {
             assertEquals(List.of("a.com", "a.com(())", "example.com"), 
             MarkdownParse.getLinks(readString("snippet2.md")));
         } catch (IOException e) {
-            fail();
         }
     }
-
 
     @Test
     public void testsnippet3(){
@@ -221,7 +217,6 @@ public class MarkdownParseTest {
                 "https://cse.ucsd.edu/"), 
             MarkdownParse.getLinks(readString("snippet3.md")));
         } catch (IOException e) {
-            fail();
         }
     }
     
