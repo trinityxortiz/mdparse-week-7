@@ -191,16 +191,6 @@ public class MarkdownParseTest {
         }
     }
 
-    // @Test
-    // public void testFile12() {
-    //     try {
-    //         assertEquals(List.of("www.google.com"), 
-    //         MarkdownParse.getLinks(readString("test-file12.md")));
-    //     } catch (IOException e) {
-    //         fail();
-    //     }
-    // }
-
     // lab report 4 tests
     @Test
     public void testsnippet1() {
